@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario avanzado</title>
+</head>
+<body>
+	<h1>Información sobre el producto</h1>
+	<form action="server.php" method="POST" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Datos básicos</legend>
+			<div>
+				<label for="nombre">Nombre</label><br>
+				<input type="text" name="basicos[nombre]">
+			</div>
+			<div>
+				<label for="descripcion">Descripcion</label><br>
+				<textarea name="basicos[descripcion]" id="descripcion" cols="30" rows="10"></textarea>
+			</div>
+			<div>
+				<label for="foto">Foto</label>
+				<input type="file" name="basicos[foto]" id="foto">
+			</div>
+			<div>
+				<input type="checkbox" name="basicos[contador]" value="1" id="contador">
+				<label for="contador">Añadir un contador de visitas</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Datos económicos</legend>
+			<div>
+				<label for="precio">Precio</label>
+				<input type="text" name="economicos[precio]" id="precio">
+				<span>€</span>
+				<label for="impuestos">Impuestos</label>
+				<select name="economicos[impuestos][]" id="impuestos" multiple size="4">
+					<option value="4">4%</option>
+					<option value="10">10%</option>
+					<option value="21">21%</option>
+				</select>
+			</div>
+			<div>
+				<input type="radio" name="economicos[promocion]" value="ninguno" id="ninguno" checked>
+				<label for="ninguno">Ninguno</label><br>
+
+				<input type="radio" name="economicos[promocion]economicos[" value="transporte" id="transporte">
+				<label for="transporte">Transporte gratuito</label><br>
+
+				<input type="radio" name="economicos[promocion]" value="descuento" id="descuento">
+				<label for="descuento">Descuento 5%</label>
+			</div>
+		</fieldset>
+
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario básico</title>
+</head>
+<body>
+	<form action="server.php" method="POST" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="35">
+		
+		<div>
+			<label for="nombre">Nombre</label><br>
+			<input type="text" name="nombre" value="Arkaitz" id="nombre">
+		</div>
+		<div>
+			<label for="">Apellidos</label><br>
+			<input type="text" name="apellidos" size="50">
+		</div>
+		<div>
+			<label for="">Contraseña</label><br>
+			<input type="password" name="password">
+		</div>
+		<div>
+			<label for="">DNI</label><br>
+			<input type="text" name="dni">
+		</div>
+		<div>
+			<span>Sexo</span><br>
+			<input type="radio" name="sexo" value="H" checked>
+			<label for="">Hombre</label><br>
+			<input type="radio" name="sexo" value="M">
+			<label for="">Mujer</label>
+		<div>
+			<label for="">Imagen</label> <input type="file" name="foto">
+		</div>
+		<div>
+			<input type="checkbox" name="newsletter" value="1" id="newsletter"><label for="newsletter">Suscribirme al newsletter</label>
+		</div>
+		<div>
+			<input type="submit" name="enviar" value="Enviar"><input type="reset" name="reset" value="Reset">
+		</div>
+	</form>
+</body>
+</html>
