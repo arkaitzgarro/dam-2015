@@ -37,6 +37,10 @@ a:active {
     float: right;
 }
 
+.txt-right {
+    text-align: right;
+}
+
 .strong {
     font-weight: bold;
 }
@@ -152,4 +156,39 @@ h3, .h3 {
 
 .form-inline input {
     display: inline-block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table {
+    border: 3px solid #ccc;
+}
+
+.data-table th,
+.data-table td {
+    padding: 3px 5px;
+}
+
+.data-table thead,
+.data-table tfoot {
+    background-color: #ccc;
+}
+
+.data-table thead {
+    text-align: left;
+}
+
+.data-table tfoot {
+    font-weight: bold;
+}
+
+.data-table .price-th {
+    width: 70px;
+}
+
+.data-table td {
+    border-bottom: 1px solid #ccc;
 }
