@@ -47,7 +47,8 @@ a:active {
 
 .wrapper {
     margin: 0 auto;
-    width: 560px;
+    min-width: 350px;
+    max-width: 600px;
 }
 
 .header {
@@ -92,6 +93,10 @@ a:active {
 
 .article .h2 {
     margin-bottom: 0.2em;
+}
+
+.h2 {
+    margin-bottom: 2em;
 }
 
 .article .h2 a {
@@ -191,4 +196,8 @@ table {
 
 .data-table td {
     border-bottom: 1px solid #ccc;
+}
+
+.date-table tr:nth-child(2n+1) {
+    background-color: #eee;
 }

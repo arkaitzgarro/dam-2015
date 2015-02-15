@@ -1,0 +1,56 @@
+/*
+    first-child
+    first-of-type
+    nth-of-type
+    nth-last-of-type
+    last-of-type
+    last-child
+*/
+
+li:first-child {
+    color: blue;
+}
+
+li:first-of-type {
+    color: blue;
+}
+
+li:nth-child(1) {
+    color: blue;
+}
+
+li:nth-of-type(1) {
+    color: blue;
+}
+
+li:nth-child(3) {
+    font-size: 1.5em;
+}
+
+li:nth-of-type(3) {
+    font-size: 1.5em;
+}
+
+li:nth-child(4) {
+    font-size: 2em;
+}
+
+li:nth-of-type(4) {
+    font-size: 2em;
+}
+
+li:last-child,
+li:last-of-type,
+li:nth-last-child(1),
+li:nth-last-of-type(1) {
+    color: blue;
+    font-size: 2.5em;
+}
+
+.first p span:first-child {
+    text-decoration: underline;
+}
+
+.wrapper .last :first-child {
+    color: blue;
+}
