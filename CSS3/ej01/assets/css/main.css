@@ -7,6 +7,10 @@
     last-child
 */
 
+body {
+    font-family: 'Pacifico', sans-serif;
+}
+
 li:first-child {
     color: blue;
 }

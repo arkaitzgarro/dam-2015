@@ -1,0 +1,171 @@
+/* --------------------------------
+Site:       Site name
+CSS author: Your name here
+Updated:    Date
+Updated by: Your name here
+-------------------------------- */
+
+/* ----------------------------
+simple reset
+---------------------------- */
+
+html, body, ul, ol, li, form, fieldset, legend
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+fieldset,img { border: 0; }
+legend { color: #000; }
+li { list-style: none; }
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td
+{
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+}
+
+input, textarea, select
+{
+    font-size: 110%;
+    line-height: 1.1;
+}
+
+abbr, acronym
+{
+    border-bottom: .1em dotted;
+    cursor: help;
+}
+
+body
+{
+    color: #000;
+    background: radial-gradient(#FFF, #eee);
+    font: 90%/1.3 "DejaVu Sans", "URW Gothic L", "Helvetica Neue", Helvetica, Arial, "Microsoft Sans Serif", sans-serif;
+    padding-top: 45px;
+}
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.header {
+    background-color: #ccc;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 40px;
+    border-bottom: 1px solid #bbb;
+    box-shadow: 0 -5px 15px 0px #000;
+}
+
+.header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+.container
+{
+    padding: 10px;
+}
+
+.nav,
+.content,
+.extras {
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+}
+
+.nav
+{
+    margin-bottom: 1em;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.content
+{
+    margin: 1em 0;
+}
+
+
+.feature-image
+{
+    display: none;
+}
+
+@media (min-width: 400px) {
+    body {
+        padding-top: 0;
+    }
+
+    .header {
+        background-color: transparent;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    .header h1 {
+        margin: 0.5em 0;
+        text-align: left;
+        font-size: 2em;
+    }
+
+    .nav {
+        width: 20%;
+    }
+
+    .nav li {
+        display: block;
+    }
+
+    .col-dcha {
+        width: 78%;
+        margin-left: 2%;
+    }
+
+    .content {
+        margin-top: 0;
+    }
+
+    .feature-image
+    {
+        display: block;
+        float: right;
+    }
+}
+
+@media (min-width: 700px) {
+    .content {
+        float: left;
+        width: 60%;
+    }
+
+    .extras {
+        float: left;
+        width: 37.43589743589744%;
+        margin-left: 2.5641025641%;
+    }
+}
