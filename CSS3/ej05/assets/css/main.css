@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background: #666 url('../img/ej03_tree.jpg') no-repeat -60px 0;
+    width: 420px;
+    height: 480px;
+    position: relative;
+}
+
+.snowflake {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    opacity: 0;
+
+    transform-origin: 0 0;
+    transition-property: opacity, transform;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+
+    animation-name: snowing, fade;
+    animation-duration: 10s, 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.snowflake.f1 {
+    left: 40px;
+
+    animation-delay: 1s;
+}
+
+.snowflake.f2 {
+    font-size: 1.8em;
+    left: 120px;
+
+    animation-delay: 5s;
+}
+
+.snowflake.f3 {
+    left: 200px;
+
+    animation-delay: 3s;
+}
+
+.snowflake.f4 {
+    font-size: 1.5em;
+    left: 280px;
+}
+
+.santa {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+
+    animation-name: santa;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes snowing {
+    20% {
+        transform: translate(35px, 100px) rotate(-45deg);
+    }
+
+    40% {
+        transform: translate(0, 200px) rotate(45deg);
+    }
+
+    60% {
+        transform: translate(25px, 300px) rotate(-45deg);
+    }
+
+    80% {
+        transform: translate(-10px, 400px) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(0, 480px);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.4;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes santa {
+    from {
+
+    }
+
+    to {
+        transform: translateX(420px);
+    }
+}
