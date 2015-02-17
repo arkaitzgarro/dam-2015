@@ -1,0 +1,41 @@
+.container {
+    width: 500px;
+    height:500px;
+}
+
+.box {
+    transition-property: background-color, height, width, top, left, color, transform;
+    transition-duration: 1s;
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.box:hover {
+    background-color: blue;
+    color: yellow;
+    font-size: 18px;
+}
+
+.ex01 .box {
+    transform: translate(10px, 10px);
+}
+
+.ex02 .box {
+    transform: translate(10px, 20px);
+}
+
+.ex03 .box {
+    transform: translate(10px, 30px);
+}
+
+.ex04 .box {
+    transform: translate(10px, 40px);
+}
+
+.ex01 .box:hover {
+    transform: translate(450px, 100px) scale(0.5) rotate(270deg);
+}

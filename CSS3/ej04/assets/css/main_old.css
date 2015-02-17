@@ -1,0 +1,65 @@
+.container {
+    width: 500px;
+    height:500px;
+    position: relative;
+}
+
+.box {
+    transition-property: transform;
+    transition-duration: 1s;
+    transform-origin: 0 0;
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.box:hover {
+    /*width: 50px;
+    height: 50px;*/
+    background-color: blue;
+    color: yellow;
+    font-size: 18px;
+}
+
+.ex01 .box {
+    transform: translate(10px, 10px);
+    /*left: 10px;
+    top: 10px;*/
+}
+
+.ex02 .box {
+    transform: translate(10px, 20px);
+    /*left: 10px;
+    top: 130px;*/
+}
+
+.ex03 .box {
+    transform: translate(10px, 30px);
+    /*left: 10px;
+    top: 250px;*/
+}
+
+.ex04 .box {
+    transform: translate(10px, 40px);
+    /*left: 10px;
+    top: 370px;*/
+}
+
+.ex01 .box:hover {
+    transform: translate(500px, 150px) scale(0.5) rotate(270deg);
+}
+
+.ex02 .box:hover {
+    transform: translate(500px, 10px) scale(0.5) rotate(270deg);
+}
+
+.ex03 .box:hover {
+    transform: translate(500px, 150px) scale(0.5) rotate(270deg);
+}
+
+.ex04 .box:hover {
+    transform: translate(500px, 10px) scale(0.5) rotate(270deg);
+}
