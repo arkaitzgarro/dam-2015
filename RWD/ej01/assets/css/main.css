@@ -22,8 +22,4 @@
     .main .well {
         text-align: left;
     }
-
-    .footer [class*="col-sm"] {
-        min-height: 150px;
-    }
 }
