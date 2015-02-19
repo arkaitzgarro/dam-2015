@@ -16,13 +16,8 @@ body {
     position: absolute;
     opacity: 0;
 
-    transform-origin: 0 0;
-    transition-property: opacity, transform;
-    transition-duration: 5s;
-    transition-timing-function: linear;
-
     animation-name: snowing, fade;
-    animation-duration: 10s, 10s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -51,7 +46,21 @@ body {
     left: 280px;
 }
 
+.snowflake.f5 {
+    left: 260px;
+
+    animation-delay: 2s;
+}
+
+.snowflake.f6 {
+    font-size: 2em;
+    left: 150px;
+
+    animation-delay: 4s;
+}
+
 .santa {
+    display: none;
     position: absolute;
     left: 0;
     bottom: 10px;
@@ -97,7 +106,7 @@ body {
         opacity: 0.8;
     }
 
-    90% {
+    80% {
         opacity: 0.4;
     }
 

@@ -1,0 +1,124 @@
+body {
+    background: #f9f9f9 url(../img/white_texture.jpg) repeat top left;
+    color: #333;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 13px;
+}
+
+.main {
+    width: 690px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.view {
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+   float: left;
+   border: 10px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: pointer;
+}
+.view .mask, .view .content {
+   width: 300px;
+   height: 200px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+
+.view .mask {
+    transition-property: background-color;
+    transition-duration: 400ms;
+
+    background-color: rgba(219,127,8, 0);
+}
+
+.view:hover .mask {
+    background-color: rgba(219,127,8, 0.7);
+}
+
+.view img {
+    transition-property: transform;
+    transition-duration: 400ms;
+    
+    display: block;
+    position: relative;
+    width: 300px;
+}
+
+.view:hover img {
+    transform: scale(1.2);
+}
+
+.view h2 {
+    transition-property: transform;
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+
+    transform: translateY(-150px);
+
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0;
+}
+
+.view:hover h2 {
+    transform: translateY(0);
+}
+
+.view p {
+    transition-property: transform;
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+
+    transform: translateY(150px);
+
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.view:hover p {
+    transform: translateY(0);
+}
+
+.view a.info {
+    transition-property: opacity;
+    transition-timing-function: linear;
+    transition-duration: 400ms;
+
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+
+    opacity: 0;
+}
+
+.view:hover a.info {
+    opacity: 1;
+}
+
+.view a.info: hover {
+   box-shadow: 0 0 5px #000;
+}
+
+/* ANIMACIONES Y TRANSICIONES */
