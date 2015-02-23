@@ -1,41 +1,31 @@
 (function() {
-    // var validarDNI = function(dni) {
-
-    //     var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'],
-    //         ok = false;
-
-    //     if (dni && (typeof dni === "string")) {
-    //         if (dni.length === 9) {
-    //             var num = parseInt(dni);
-
-    //             if (!isNaN(num) && num >= 0 && num <= 999999999) {
-    //                 var char = dni.charAt(dni.length - 1);
-
-    //                 if (typeof char === "string") {
-    //                     ok = (char === letras[num % 23]);
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    //     return ok;
-    // };
-
     var validarDNI = function(dni) {
+        // var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'],
+        //     ok = false;
+
+        // if (dni && typeof dni === "string" && dni.length === 9) {
+        //     var num = parseInt(dni);
+
+        //     if (num >= 0 && num <= 99999999) {
+        //         var char = dni.charAt(dni.length - 1).toUpperCase();
+
+        //         ok = char === letras[num%23];
+        //     }
+        // }
+
         var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'],
-            ok = false;
+            sintax_ok = false;
 
-        if (dni && typeof dni === "string" && dni.length === 9) {
+        sintax_ok = /^[0-9]{8}[a-zA-Z]$/.test(dni);
+
+        if (sintax_ok) {
             var num = parseInt(dni);
+            var char = dni.charAt(dni.length - 1).toUpperCase();
 
-            if (num >= 0 && num <= 99999999) {
-                var char = dni.charAt(dni.length - 1).toUpperCase();
-
-                ok = char === letras[num%23];
-            }
+            sintax_ok = sintax_ok && (char === letras[num%23]);
         }
 
-        return ok;
+        return sintax_ok;
     };
 
     console.log(validarDNI("44153570X") === true);
