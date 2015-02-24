@@ -31,7 +31,7 @@
     console.log(validarDNI("44153570X") === true);
     console.log(validarDNI("44153570x") === true);
     console.log(validarDNI("00000013J") === true);
-    console.log(validarDNI("013T0000J") === false);
+    console.log(validarDNI("013J0000J") === false);
     console.log(validarDNI("99999999A") === false);
     console.log(validarDNI("AAAAAAA1T") === false);
     console.log(validarDNI("A") === false);
