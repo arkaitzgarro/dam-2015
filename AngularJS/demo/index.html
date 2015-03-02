@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Demo AngularJS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="assets/js/vendor/angular.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="well">
+            <form action="#" class="form">
+                <div class="form-row">
+                    <label for="name" class="control-label">Introduce tu nombre: </label>
+                    <input type="text" class="form-control" id="name" ng-model="yourName">
+                </div>
+                <div class="form-row">
+                    <p>Tu nombre es: <span class="" id="target">{{ yourName }}</span></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--<script src="assets/js/app.js"></script>-->
+</body>
+</html>

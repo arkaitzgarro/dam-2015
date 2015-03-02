@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO List AngularJS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="assets/js/vendor/angular.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="h2">TODO list</h1>
+        <div class="well" ng-controller="TodoController">
+            <form action="#" class="form-inline" ng-submit="addTodo()">
+                <div class="form-group">
+                    <input type="text" class="form-control" size="40" ng-model="inputText">
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </form>
+
+            <ul class="list-unstyled">
+                <li ng-repeat="todo in todos">
+                    <input type="checkbox" ng-model="todo.done"><span>{{ todo.task }}</span>
+                </li>
+              </ul>  
+        </div>
+    </div>
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
