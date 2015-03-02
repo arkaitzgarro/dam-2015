@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Reproductor de vídeo</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+
+        <script src="assets/js/vendor/modernizr.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <video id="player">
+                        <source src="assets/videos/Teahupoo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <source src="assets/videos/Teahupoo.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+                    </video>
+                </div>
+                <div class="col-xs-12">
+                    <div class="controls">
+                        <form class="video-controls" action="#">
+                            <progress id="progress" max="100" class="center-block"></progress>
+                            <button id="play" class="btn"><span class="glyphicon glyphicon-play"></span></button>
+                            <button id="pause" class="btn"><span class="glyphicon glyphicon-pause"></span></button>
+                            <button id="stop" class="btn"><span class="glyphicon glyphicon-stop"></span></button>
+                            <button id="start" class="btn"><span class="glyphicon glyphicon-step-backward"></span></button>
+                            <button id="backward" class="btn"><span class="glyphicon glyphicon-backward"></span></button>
+                            <button id="forward" class="btn"><span class="glyphicon glyphicon-forward"></span></button>
+                            <button id="end" class="btn"><span class="glyphicon glyphicon-step-forward"></span></button>
+                            <button id="fullscreen" class="btn"><span class="glyphicon glyphicon-fullscreen"></span></button>
+                            <input id="volume" type="range" min="0" max="100" step="1" class="pull-right">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div id="playlist">
+                        <ul class="list-unstyled">
+                            <li data-src="assets/videos/Teahupoo">
+                                <span class="glyphicon glyphicon-facetime-video"></span> Teahupoo
+                            </li>
+                            <li data-src="assets/videos/BMX"><span class="glyphicon glyphicon-facetime-video"></span> BMX</li>
+                            <li data-src="assets/videos/F1"><span class="glyphicon glyphicon-facetime-video"></span> Formula 1</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="assets/js/app.js">
+        </script>
+    </body>
+</html>
