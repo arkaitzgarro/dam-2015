@@ -2,21 +2,21 @@ HTMLFormElement.prototype.validate = function(cfg) {
     console.log('Validate function');
 
     var validator = {
-        required : function(value) {
+        required: function(value) {
             return value !== undefined &&
-                   value !== null &&
-                   value.length > 0 &&
-                   !/^\s+$/.test(value);
+                value !== null &&
+                value.length > 0 &&
+                !/^\s+$/.test(value);
         },
-        email : function(value) {
+        email: function(value) {
             return /^\w([\w.\-]*\w)?@[a-zA-Z0-9]([\w.\-]*\w)?\.[a-zA-Z]{2,3}$/.test(value);
         },
-        password : function(value) {
+        password: function(value) {
             return this.required(value) &&
-                   value.length > 6 &&
-                   /[a-z]/.test(value) &&
-                   /[A-Z]/.test(value) &&
-                   /[0-9]/.test(value);
+                value.length > 6 &&
+                /[a-z]/.test(value) &&
+                /[A-Z]/.test(value) &&
+                /[0-9]/.test(value);
         }
     };
 
@@ -27,7 +27,7 @@ HTMLFormElement.prototype.validate = function(cfg) {
     var validateForm = function(e) {
         console.log('Validating form...');
 
-        for(var i=0; i<required.length; i++) {
+        for (var i = 0; i < required.length; i++) {
             var input = required.item(i);
 
             validateRequired.element = required[i];
@@ -36,7 +36,7 @@ HTMLFormElement.prototype.validate = function(cfg) {
             validateRequired.call(input);
         }
 
-        for(i=0; i<emails.length; i++) {
+        for (i = 0; i < emails.length; i++) {
             var email = emails.item(i);
 
             if (!validator.email(email.value)) {
@@ -53,7 +53,7 @@ HTMLFormElement.prototype.validate = function(cfg) {
         errors = [];
 
         console.log(this);
-        
+
         if (this.type === 'checkbox' && !this.checked) {
             errors.push(this.name + ' no está marcado.');
         } else if (this.type === 'password') {
@@ -80,7 +80,7 @@ HTMLFormElement.prototype.validate = function(cfg) {
         this.parentNode.classList.add('has-error');
         this.parentNode.appendChild(span);
     };
-    
+
     this.addEventListener('submit', validateForm, false);
     for (var i = required.length - 1; i >= 0; i--) {
         required[i].addEventListener('blur', validateRequired, false);

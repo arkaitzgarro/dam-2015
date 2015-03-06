@@ -1,34 +1,52 @@
 * {
     border: 1px solid #000;
 }
-
 * * {
     border: 1px solid red;
 }
-
 * * * {
     border: 1px solid blue;
 }
-
 /* Todos los elementos de la pagina */
-body { font: 1em/1.3 Arial, Helvetica, sans-serif; }
 
+body {
+    font: 1em/1.3 Arial, Helvetica, sans-serif;
+}
 /* Todos los parrafos de la pagina */
-p { color: #555; }
 
+p {
+    color: #555;
+}
 /* Todos los párrafos contenidos en #primero */
-#primero p { color: #336699; }
 
-#primero p a { color: orange; }
-
+#primero p {
+    color: #336699;
+}
+#primero p a {
+    color: orange;
+}
 /* Todos los enlaces la pagina */
-a { color: #CC3300; padding: 10px; display: inline-block; }
 
+a {
+    color: #CC3300;
+    padding: 10px;
+    display: inline-block;
+}
 /* Los elementos "em" contenidos en #primero */
-#primero em { background: #FFFFCC; padding: .1em; }
 
+#primero em {
+    background: #FFFFCC;
+    padding: .1em;
+}
 /* Todos los elementos "em" de clase "especial" en toda la pagina */
-em.especial { background: #FFCC99; border: 1px solid #FF9900; padding: .1em; }
 
+em.especial {
+    background: #FFCC99;
+    border: 1px solid #FF9900;
+    padding: .1em;
+}
 /* Elementos "span" contenidos en .normal */
-.normal span { font-weight: bold; }
+
+.normal span {
+    font-weight: bold;
+}
