@@ -65,8 +65,26 @@ APP.DB = (function(){
         });
     };
 
+    var get = function(id, success) {
+        db.transaction(function(tx){
+            var sql = "SELECT * FROM tweets WHERE id = ?";
+            tx.executeSql(sql, [id], function(tx, results){
+                var datos = [];
+
+                for (var i = results.rows.length - 1; i >= 0; i--) {
+                    datos.push(results.rows.item(i));
+                }
+
+                return (datos.length) ? success(datos[0]) : success(null);
+            }, function(tx, error){
+
+            });
+        });
+    };
+
     return {
         insert : insert,
+        get : get,
         getAll : getAll
     };
 })();
